@@ -173,17 +173,60 @@
         </div>
       </div>
 
-      <!-- GHL Screenshot placeholder — swap in real images when ready -->
-      <div class="grid md:grid-cols-2 gap-4 mb-12">
-        <div class="bg-[#F8FAFC] rounded-2xl border border-dashed border-slate-300 p-4 text-center flex flex-col items-center justify-center min-h-[180px]" id="pipeline-slot">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="mb-2 text-slate-300"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5"/></svg>
-          <p class="text-slate-400 text-xs" style="font-weight:600">GHL Live Pipeline Screenshot</p>
-          <p class="text-slate-300 text-xs mt-1">Drop your screenshot here</p>
+      <!-- GHL Live Screenshots -->
+      <div class="mb-4">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></div>
+          <p class="text-sm text-slate-500" style="font-weight:600">Live client accounts — actual GHL dashboards, not mockups</p>
         </div>
-        <div class="bg-[#F8FAFC] rounded-2xl border border-dashed border-slate-300 p-4 text-center flex flex-col items-center justify-center min-h-[180px]" id="calendar-slot">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="mb-2 text-slate-300"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <p class="text-slate-400 text-xs" style="font-weight:600">GHL Booked Calendar Screenshot</p>
-          <p class="text-slate-300 text-xs mt-1">Drop your screenshot here</p>
+        <div class="grid md:grid-cols-2 gap-4 mb-3">
+
+          <!-- Pipeline card -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <div class="px-4 py-3 border-b border-slate-100 flex items-center justify-between bg-[#F8FAFC]">
+              <div class="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#1A6DE0" stroke-width="2"/><path d="M3 9h18M9 21V9" stroke="#1A6DE0" stroke-width="2"/></svg>
+                <span class="text-xs text-slate-600" style="font-weight:700">Live Marketing Pipeline</span>
+              </div>
+              <span class="text-xs bg-[#ECFDF5] text-[#059669] border border-[#A7F3D0] px-2 py-0.5 rounded-full" style="font-weight:600">🟢 Active</span>
+            </div>
+            <img src="/pipeline.png" alt="Live GHL pipeline showing 13 opportunities and $210k in revenue" class="w-full" />
+            <div class="px-4 py-3 border-t border-slate-100 grid grid-cols-3 gap-2 text-center">
+              <div>
+                <p class="text-xs text-slate-400" style="font-weight:500">Opportunities</p>
+                <p class="text-base text-[#0F172A]" style="font-weight:800">13</p>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400" style="font-weight:500">Pipeline Value</p>
+                <p class="text-base text-[#1A6DE0]" style="font-weight:800">$210,000</p>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400" style="font-weight:500">Closed</p>
+                <p class="text-base text-[#10B981]" style="font-weight:800">$85,000</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calendar card -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <div class="px-4 py-3 border-b border-slate-100 flex items-center justify-between bg-[#F8FAFC]">
+              <div class="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#1A6DE0" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="#1A6DE0" stroke-width="2" stroke-linecap="round"/></svg>
+                <span class="text-xs text-slate-600" style="font-weight:700">Booked Appointment Calendar</span>
+              </div>
+              <span class="text-xs bg-[#ECFDF5] text-[#059669] border border-[#A7F3D0] px-2 py-0.5 rounded-full" style="font-weight:600">🟢 Active</span>
+            </div>
+            <img src="/calendar.png" alt="GHL calendar fully booked with homeowner appointments" class="w-full" />
+            <div class="px-4 py-3 border-t border-slate-100 text-center">
+              <p class="text-xs text-slate-500 leading-relaxed" style="font-weight:500">Qualified homeowners booked wall-to-wall — every slot filled by our system, done for you.</p>
+            </div>
+          </div>
+
+        </div>
+        <!-- Urgency strip -->
+        <div class="bg-[#0F172A] rounded-xl px-5 py-3.5 flex items-center gap-3 mb-12">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"><circle cx="12" cy="12" r="9" stroke="#10B981" stroke-width="2"/><path d="M12 7V12L15 14" stroke="#10B981" stroke-width="2" stroke-linecap="round"/></svg>
+          <p class="text-sm text-slate-300 leading-snug"><span class="text-white" style="font-weight:700">This is what your calendar looks like in 30 days.</span> One contractor per market. Your territory is on hold — but not forever.</p>
         </div>
       </div>
 
