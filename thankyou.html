@@ -86,6 +86,102 @@
     </div>
   </section>
 
+  <!-- 3 Steps Before Call -->
+  <section class="bg-[#F8FAFC] py-10 md:py-20 border-t border-slate-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-5">
+
+      <h2 class="text-2xl md:text-3xl text-[#0F172A] mb-2" style="font-weight:800">
+        Complete These 3 Steps Before Your Call
+      </h2>
+      <p class="text-slate-500 mb-8 text-sm md:text-base" style="font-weight:500">
+        This takes less than 5 minutes and will make sure you get maximum value from our time together.
+      </p>
+      <div class="flex flex-col gap-4">
+
+        <!-- Step 01 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-5 md:p-6 shadow-sm flex gap-5 items-start">
+          <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#EFF6FF] flex items-center justify-center">
+            <span class="text-[#1A6DE0] text-sm" style="font-weight:800">01</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-1 flex-wrap">
+              <span class="text-[#0F172A] text-base md:text-lg" style="font-weight:700">Watch the Full Video Above</span>
+              <span class="text-xs bg-[#1A6DE0] text-white px-2.5 py-0.5 rounded-full uppercase tracking-wide" style="font-weight:700;letter-spacing:0.06em">Priority</span>
+            </div>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              This covers our exact system for generating James Hardie Siding projects on demand in your market. Come to your call having watched this — it'll make our time together 10x more productive.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 02 -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-5 md:p-6 shadow-sm flex gap-5 items-start">
+          <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#ECFDF5] flex items-center justify-center">
+            <span class="text-[#059669] text-sm" style="font-weight:800">02</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <span class="text-[#0F172A] text-base md:text-lg block mb-1" style="font-weight:700">Check Your Email &amp; Accept the Calendar Invite</span>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              You'll receive a confirmation email with your call details and a calendar invite. Open it, accept it, and add the call to your calendar so you don't miss it.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 03 — ROI Calculator -->
+        <div class="bg-white border border-[#1A6DE0]/20 rounded-2xl p-5 md:p-6 shadow-sm">
+          <div class="flex gap-5 items-start mb-5">
+            <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#EFF6FF] flex items-center justify-center">
+              <span class="text-[#1A6DE0] text-sm" style="font-weight:800">03</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 flex-wrap mb-1">
+                <span class="text-[#0F172A] text-base md:text-lg" style="font-weight:700">See Your Revenue Potential</span>
+                <span class="text-xs bg-slate-100 text-slate-500 px-2.5 py-0.5 rounded-full" style="font-weight:600">ROI Calculator</span>
+              </div>
+              <p class="text-slate-500 text-sm">Enter your average job value and see what 8–12 siding jobs a month means for your business.</p>
+            </div>
+          </div>
+          <div class="bg-[#F8FAFC] rounded-xl p-4 md:p-5">
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="block text-xs text-slate-500 mb-1.5" style="font-weight:600">Average Job Value ($)</label>
+                <div class="relative">
+                  <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">$</span>
+                  <input id="jobValue" type="number" value="12000" min="1000" step="500"
+                    class="w-full pl-7 pr-4 py-2.5 rounded-lg border border-slate-200 bg-white text-[#0F172A] text-sm focus:outline-none focus:ring-2 focus:ring-[#1A6DE0]/30 focus:border-[#1A6DE0]"
+                    style="font-weight:600" oninput="calcROI()" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs text-slate-500 mb-1.5" style="font-weight:600">Jobs Per Month (we deliver 8–12)</label>
+                <div class="flex items-center gap-3 mt-1">
+                  <input id="jobCount" type="range" min="8" max="12" value="10" class="flex-1 accent-[#1A6DE0]"
+                    oninput="calcROI(); document.getElementById('jobCountDisplay').textContent = this.value" />
+                  <span id="jobCountDisplay" class="text-[#1A6DE0] text-sm w-6 text-center" style="font-weight:700">10</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-3">
+              <div class="bg-white rounded-xl border border-slate-200 p-3 text-center">
+                <p class="text-xs text-slate-400 mb-1" style="font-weight:500">Monthly Revenue</p>
+                <p id="monthly" class="text-lg text-[#0F172A]" style="font-weight:800">$120,000</p>
+              </div>
+              <div class="bg-white rounded-xl border border-slate-200 p-3 text-center">
+                <p class="text-xs text-slate-400 mb-1" style="font-weight:500">Annual Revenue</p>
+                <p id="annual" class="text-lg text-[#1A6DE0]" style="font-weight:800">$1,440,000</p>
+              </div>
+              <div class="bg-[#ECFDF5] rounded-xl border border-[#A7F3D0] p-3 text-center">
+                <p class="text-xs text-[#059669] mb-1" style="font-weight:500">Extra Jobs/Year</p>
+                <p id="yearlyJobs" class="text-lg text-[#059669]" style="font-weight:800">120 jobs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Social Proof / Case Studies -->
   <section class="bg-white py-14 md:py-20 border-t border-slate-100">
     <div class="max-w-4xl mx-auto px-4 sm:px-5">
@@ -273,101 +369,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- 3 Steps Before Call -->
-  <section class="bg-[#F8FAFC] py-10 md:py-20">
-    <div class="max-w-3xl mx-auto px-4 sm:px-5">
-      <h2 class="text-2xl md:text-3xl text-[#0F172A] mb-2" style="font-weight:800">
-        Complete These 3 Steps Before Your Call
-      </h2>
-      <p class="text-slate-500 mb-8 text-sm md:text-base" style="font-weight:500">
-        This takes less than 5 minutes and will make sure you get maximum value from our time together.
-      </p>
-      <div class="flex flex-col gap-4">
-
-        <!-- Step 01 -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-5 md:p-6 shadow-sm flex gap-5 items-start">
-          <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#EFF6FF] flex items-center justify-center">
-            <span class="text-[#1A6DE0] text-sm" style="font-weight:800">01</span>
-          </div>
-          <div class="flex-1 min-w-0">
-            <div class="flex items-center gap-2 mb-1 flex-wrap">
-              <span class="text-[#0F172A] text-base md:text-lg" style="font-weight:700">Watch the Full Video Above</span>
-              <span class="text-xs bg-[#1A6DE0] text-white px-2.5 py-0.5 rounded-full uppercase tracking-wide" style="font-weight:700;letter-spacing:0.06em">Priority</span>
-            </div>
-            <p class="text-slate-500 text-sm leading-relaxed">
-              This covers our exact system for generating James Hardie Siding projects on demand in your market. Come to your call having watched this — it'll make our time together 10x more productive.
-            </p>
-          </div>
-        </div>
-
-        <!-- Step 02 -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-5 md:p-6 shadow-sm flex gap-5 items-start">
-          <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#ECFDF5] flex items-center justify-center">
-            <span class="text-[#059669] text-sm" style="font-weight:800">02</span>
-          </div>
-          <div class="flex-1 min-w-0">
-            <span class="text-[#0F172A] text-base md:text-lg block mb-1" style="font-weight:700">Check Your Email &amp; Accept the Calendar Invite</span>
-            <p class="text-slate-500 text-sm leading-relaxed">
-              You'll receive a confirmation email with your call details and a calendar invite. Open it, accept it, and add the call to your calendar so you don't miss it.
-            </p>
-          </div>
-        </div>
-
-        <!-- Step 03 — ROI Calculator -->
-        <div class="bg-white border border-[#1A6DE0]/20 rounded-2xl p-5 md:p-6 shadow-sm">
-          <div class="flex gap-5 items-start mb-5">
-            <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#EFF6FF] flex items-center justify-center">
-              <span class="text-[#1A6DE0] text-sm" style="font-weight:800">03</span>
-            </div>
-            <div>
-              <div class="flex items-center gap-2 flex-wrap mb-1">
-                <span class="text-[#0F172A] text-base md:text-lg" style="font-weight:700">See Your Revenue Potential</span>
-                <span class="text-xs bg-slate-100 text-slate-500 px-2.5 py-0.5 rounded-full" style="font-weight:600">ROI Calculator</span>
-              </div>
-              <p class="text-slate-500 text-sm">Enter your average job value and see what 8–12 siding jobs a month means for your business.</p>
-            </div>
-          </div>
-          <div class="bg-[#F8FAFC] rounded-xl p-4 md:p-5">
-            <div class="grid md:grid-cols-2 gap-4 mb-4">
-              <div>
-                <label class="block text-xs text-slate-500 mb-1.5" style="font-weight:600">Average Job Value ($)</label>
-                <div class="relative">
-                  <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">$</span>
-                  <input id="jobValue" type="number" value="12000" min="1000" step="500"
-                    class="w-full pl-7 pr-4 py-2.5 rounded-lg border border-slate-200 bg-white text-[#0F172A] text-sm focus:outline-none focus:ring-2 focus:ring-[#1A6DE0]/30 focus:border-[#1A6DE0]"
-                    style="font-weight:600" oninput="calcROI()" />
-                </div>
-              </div>
-              <div>
-                <label class="block text-xs text-slate-500 mb-1.5" style="font-weight:600">Jobs Per Month (we deliver 8–12)</label>
-                <div class="flex items-center gap-3 mt-1">
-                  <input id="jobCount" type="range" min="8" max="12" value="10" class="flex-1 accent-[#1A6DE0]"
-                    oninput="calcROI(); document.getElementById('jobCountDisplay').textContent = this.value" />
-                  <span id="jobCountDisplay" class="text-[#1A6DE0] text-sm w-6 text-center" style="font-weight:700">10</span>
-                </div>
-              </div>
-            </div>
-            <div class="grid grid-cols-3 gap-3">
-              <div class="bg-white rounded-xl border border-slate-200 p-3 text-center">
-                <p class="text-xs text-slate-400 mb-1" style="font-weight:500">Monthly Revenue</p>
-                <p id="monthly" class="text-lg text-[#0F172A]" style="font-weight:800">$120,000</p>
-              </div>
-              <div class="bg-white rounded-xl border border-slate-200 p-3 text-center">
-                <p class="text-xs text-slate-400 mb-1" style="font-weight:500">Annual Revenue</p>
-                <p id="annual" class="text-lg text-[#1A6DE0]" style="font-weight:800">$1,440,000</p>
-              </div>
-              <div class="bg-[#ECFDF5] rounded-xl border border-[#A7F3D0] p-3 text-center">
-                <p class="text-xs text-[#059669] mb-1" style="font-weight:500">Extra Jobs/Year</p>
-                <p id="yearlyJobs" class="text-lg text-[#059669]" style="font-weight:800">120 jobs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 
